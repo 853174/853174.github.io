@@ -1,5 +1,6 @@
 :root{
   --font-color: white;
+  --secondary-font-color: black;
   --background-color: #2C3E50;
   --secondary-background-color: #212F3D;
 
@@ -165,6 +166,22 @@ th, .emphasis{
   column-count: 2;
 }
 
+@media (max-width: 575.98px) {
+  #projects{
+    column-count: 1;
+  }
+}
+
 #projects .card{
   background-color: var(--background-color);
+}
+
+.badge-primary{
+  background-color: var(--emphasis-color);
+  color: var(--font-color);
+}
+
+.badge-secondary{
+  background-color: var(--secondary-emphasis-color);
+  color: var(--secondary-font-color);
 }
