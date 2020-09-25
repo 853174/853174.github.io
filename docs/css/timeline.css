@@ -1,0 +1,80 @@
+/* Timeline*/
+
+.timeline-container{
+  margin-top: 35px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 0 20px;
+  margin: -20px;
+  list-style: none;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding-right: 8px;
+  border-right: 1px solid var(--emphasis-color);
+  content: "";
+}
+.timeline__item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  padding: 5px 0;
+}
+.timeline__step {
+  padding-right: 20px;
+}
+.timeline__step__marker {
+  position: relative;
+  display: table-cell;
+  height: 16px;
+  min-height: 16px;
+  width: 16px;
+  min-width: 16px;
+  border: 4px solid var(--emphasis-color);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: var(--emphasis-color);
+  z-index: 0;
+  top: 3px;
+}
+
+.timeline__time {
+  margin-top: 4px;
+  width: 80px !important;
+  min-width: 80px !important;
+  padding-right: 20px;
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.timeline__time__end{
+  font-size: 12px;
+}
+
+.timeline__title {
+  margin-top: 0px;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: bolder;
+}
+.timeline__points {
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: white;
+}
+.timeline__points > * {
+  padding: 0 0 0 0;
+}
