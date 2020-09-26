@@ -92,6 +92,7 @@ th, .emphasis{
   height: 200px;
   margin: 0 auto;
   border-radius: 50%;
+  background-color: var(--secondary-emphasis-color);
   background-image: url('../img/iosu.jpeg');
   background-position: 50% 20%;
   background-size: 100%;
@@ -184,4 +185,8 @@ th, .emphasis{
 .badge-secondary{
   background-color: var(--secondary-emphasis-color);
   color: var(--secondary-font-color);
+}
+
+.centered{
+  text-align: center;
 }
