@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eu" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,277 +20,294 @@
     <link rel="stylesheet" href="docs/css/master.css">
     <link rel="stylesheet" href="docs/css/timeline.css">
 
+    <!-- Internationalization -->
+    <script src="docs/js/jquery.i18n.properties.js" charset="utf-8"></script>
+    <script src="docs/js/locales.js" charset="utf-8"></script>
+
+    <!-- Loading page -->
+    <script src="docs/js/load.js" charset="utf-8"></script>
+
   </head>
-  <body id="cv">
-    <div class="main-block">
-      <div class="container">
-        <div class="main-img"></div>
-        <div id="me">
-          <h1 id="name">IOSU SALABERRI</h1>
-          <h2 id="title">Ingeniero Informático</h2>
-          <hr>
-          <table class="social-networks">
-            <tbody>
-              <tr>
-                <td><a href="https://github.com/853174" target="_blank"><i class="fab fa-github"></i></a></td>
-                <td><a target="_blank" href="https://es.linkedin.com/in/iosu-salaberri-051a421b5?challengeId=AQEufNWE7ECZpgAAAXS_157CSljmyKO0TKv6OU5PgGBMgN23E1HNrl4WpZKbOqyibF31b4wEK6P_nEZQmzagxuPgCAvUddnGSw&submissionId=ccf0fad2-47b4-3716-5b0a-5dbf5f17032d"><i class="fab fa-linkedin-in"></i></a></td>
-              </tr>
-            </tbody>
-          </table>
+  <body>
+    <div id="loading" class="row align-items-center justify-content-center">
+      <div class="col-auto">
+        <h1 id="filename">iosu_salaberri.cv</h1>
+        <div class="progress" style="height: 2px; width: 300px;">
+          <div class="progress-bar" role="progressbar" id="loading-bar"></div>
         </div>
       </div>
     </div>
-    <div class="main-block">
-      <div class="container">
-        <h3>Sobre mi</h3>
-        <div class="row mt-4">
-          <div class="col-12 col-md-6">
-            <p>Recién graduado y <span class="emphasis">deseando poner en práctica mis conocimientos</span>. A pesar de tener poca experiencia laboral considero que <span class="emphasis">aprendo rápido</span> me desenvuelvo bien en el entorno de trabajo.</p>
-            <h5>Detalles personales</h5>
-            <table id="personal-info">
+    <div id="cv" class="d-none">
+      <div class="main-block">
+        <div class="container">
+          <div class="main-img"></div>
+          <div id="me">
+            <h1 id="name"><msg-code value="user.name" class="text-uppercase"></msg-code></h1>
+            <h2 id="title"><msg-code value="user.shortComment"></msg-code></h2>
+            <hr>
+            <table class="social-networks">
               <tbody>
                 <tr>
-                  <th>Fecha de nacimiento</th>
-                  <td>20-04-1998</td>
-                </tr>
-                <tr>
-                  <th>Teléfono</th>
-                  <td>646673463</td>
-                </tr>
-                <tr>
-                  <th>Email</th>
-                  <td>iosusalaberri@gmail.com</td>
-                </tr>
-                <tr>
-                  <th>Dirección</th>
-                  <td>Donostia, Guipúzcoa</td>
-                </tr>
-                <tr>
-                  <th>Estado laboral</th>
-                  <td>Desempleado</td>
+                  <td><a href="https://github.com/853174" target="_blank"><i class="fab fa-github"></i></a></td>
+                  <td><a target="_blank" href="https://es.linkedin.com/in/iosu-salaberri-051a421b5?challengeId=AQEufNWE7ECZpgAAAXS_157CSljmyKO0TKv6OU5PgGBMgN23E1HNrl4WpZKbOqyibF31b4wEK6P_nEZQmzagxuPgCAvUddnGSw&submissionId=ccf0fad2-47b4-3716-5b0a-5dbf5f17032d"><i class="fab fa-linkedin-in"></i></a></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="col-12 col-md-6">
-            <h5>Intereses</h5>
-            <div id="interests" class="card-columns">
-              <div class="card">
-                <i class="fas fa-running"></i>
-                <br>
-                DEPORTE
-              </div>
-              <div class="card">
-                <i class="fas fa-headphones"></i>
-                <br>
-                MÚSICA
-              </div>
-              <div class="card">
-                <i class="fas fa-pencil-ruler"></i>
-                <br>
-                DISEÑO
-              </div>
-              <div class="card">
-                <i class="fab fa-linux"></i>
-                <br>
-                SOFTWARE LIBRE
+        </div>
+      </div>
+      <div class="main-block">
+        <div class="container">
+          <h3><msg-code value="section.about"></msg-code></h3>
+          <div class="row mt-4">
+            <div class="col-12 col-md-6">
+              <p><msg-code value="section.about.resume"></msg-code></p>
+              <h5><msg-code value="section.about.personal"></msg-code></h5>
+              <table id="personal-info">
+                <tbody>
+                  <tr>
+                    <th><msg-code value="section.about.personal.birthday"></msg-code></th>
+                    <td><msg-code value="user.birthday"></msg-code></td>
+                  </tr>
+                  <tr>
+                    <th><msg-code value="section.about.personal.tel"></msg-code></th>
+                    <td><msg-code value="user.tel"></msg-code></td>
+                  </tr>
+                  <tr>
+                    <th><msg-code value="section.about.personal.email"></msg-code></th>
+                    <td><msg-code value="user.email"></msg-code></td>
+                  </tr>
+                  <tr>
+                    <th><msg-code value="section.about.personal.direction"></msg-code></th>
+                    <td><msg-code value="user.direction"></msg-code></td>
+                  </tr>
+                  <tr>
+                    <th><msg-code value="section.about.personal.workingStatus"></msg-code></th>
+                    <td><msg-code value="user.workingStatus"></msg-code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6">
+              <h5><msg-code value="section.about.interests"></msg-code></h5>
+              <div id="interests" class="card-columns">
+                <div class="card">
+                  <i class="fas fa-running"></i>
+                  <br>
+                  <msg-code value="section.about.interests.sports" class="text-uppercase"></msg-code>
+                </div>
+                <div class="card">
+                  <i class="fas fa-headphones"></i>
+                  <br>
+                  <msg-code value="section.about.interests.music" class="text-uppercase"></msg-code>
+                </div>
+                <div class="card">
+                  <i class="fas fa-pencil-ruler"></i>
+                  <br>
+                  <msg-code value="section.about.interests.design" class="text-uppercase"></msg-code>
+                </div>
+                <div class="card">
+                  <i class="fab fa-linux"></i>
+                  <br>
+                  <msg-code value="section.about.interests.freeSoftware" class="text-uppercase"></msg-code>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="main-block">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <h3>Educación</h3>
-            <div class="timeline-container">
-              <ul class="timeline">
-                <li class="timeline__item">
-                  <div class="timeline__step">
-                    <div class="timeline__step__marker"></div>
-                  </div>
-                  <div class="timeline__time">
-                    2016
-                    <span class="timeline__time__end">2020</span>
-                  </div>
-                  <div class="timeline__content">
-                    <div class="timeline__title">
-                      Grado de Ingeniería Informática
-                      <br>
-                      <small>Especialidad en Ingeniería de Software</small>
+      <div class="main-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3><msg-code value="section.education"></msg-code></h3>
+              <div class="timeline-container">
+                <ul class="timeline">
+                  <li class="timeline__item">
+                    <div class="timeline__step">
+                      <div class="timeline__step__marker"></div>
                     </div>
-                    <ul class="timeline__points">
-                      <li>Universidad del Pais Vasco</li>
-                      <li>(Donostia)</li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <h3>Experiencia laboral</h3>
-            <div class="timeline-container">
-              <ul class="timeline">
-                <li class="timeline__item">
-                  <div class="timeline__step">
-                    <div class="timeline__step__marker"></div>
-                  </div>
-                  <div class="timeline__time">
-                    2019
-                    <span class="timeline__time__end">300h</span>
-                  </div>
-                  <div class="timeline__content">
-                    <div class="timeline__title">
-                      EUROHELP CONSULTING S.L.
+                    <div class="timeline__time">
+                      <msg-code value="section.education.grade1.startYear"></msg-code>
+                      <span class="timeline__time__end"><msg-code value="section.education.grade1.endYear"></msg-code></span>
                     </div>
-                    <ul class="timeline__points">
-                      <li>Prácticas, desarrollo de aplicaciones web en <i>Spring</i></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
+                    <div class="timeline__content">
+                      <div class="timeline__title">
+                        <msg-code value="section.education.grade1.title"></msg-code>
+                        <br>
+                        <small><msg-code value="section.education.grade1.subtitle"></msg-code></small>
+                      </div>
+                      <ul class="timeline__points">
+                        <li><msg-code value="section.education.grade1.university"></msg-code></li>
+                        <li>(<msg-code value="section.education.grade1.place"></msg-code>)</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="main-block">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <h3>Aptitudes técnicas</h3>
-            <table id="abilities">
-              <tbody>
-                <tr>
-                  <td>
-                    <span class="ability">Desarrollo de aplicaciones web</span><br>
-                    <span class="ability-detail">PHP, JavaScript, HTML5, CSS, MySQL...</span>
-                  </td>
-                  <td>
-                    <div class="round fill"></div>
-                    <div class="round fill"></div>
-                    <div class="round fill"></div>
-                    <div class="round"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="ability">Programación Orientada a Objetos</span><br>
-                    <span class="ability-detail">Java, Python</span>
-                  </td>
-                  <td>
-                    <div class="round fill"></div>
-                    <div class="round fill"></div>
-                    <div class="round fill"></div>
-                    <div class="round"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="ability">Frameworks de Desarrollo web</span><br>
-                    <span class="ability-detail">Django, WordPress, Spring</span>
-                  </td>
-                  <td>
-                    <div class="round fill"></div>
-                    <div class="round fill"></div>
-                    <div class="round"></div>
-                    <div class="round"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="ability">Diseño gráfico</span><br>
-                    <span class="ability-detail">Photoshop, InDesing...</span>
-                  </td>
-                  <td>
-                    <div class="round fill"></div>
-                    <div class="round fill"></div>
-                    <div class="round"></div>
-                    <div class="round"></div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="col-12 col-md-6">
-            <h3>Proyectos</h3>
-            <div id="projects" class="card-columns">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">SPLMiner</h5>
-                  <h6 class="card-subtitle mb-2">Trabajo de Fin de Grado</h6>
-                  <p class="card-text">Minador de <abbr title="Lineas de Producto de Software">LPS</abbr> implementadas con el software basado en anotaciones <i>pure::variants</i>.</p>
-                  <div>
-                    <span class="badge badge-primary">Java</span>
-                    <span class="badge badge-primary">SPL</span>
-                    <span class="badge badge-secondary">JGit</span>
-                    <span class="badge badge-secondary">MySQL</span>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <a class="card-link" href="https://github.com/853174/SPLMiner" target="_blank">Repo GitHub</a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">InsideSPL</h5>
-                  <h6 class="card-subtitle mb-2">Trabajo de Fin de Grado</h6>
-                  <p class="card-text">Generador de visualizaciones explicativas de <abbr title="Lineas de Producto de Software">LPS</abbr> para ayudar en el aprendizaje a desarrolladores noveles.</p>
-                  <div>
-                    <span class="badge badge-primary">Spring</span>
-                    <span class="badge badge-primary">Java</span>
-                    <span class="badge badge-primary">SPL</span>
-                    <span class="badge badge-primary">JavaScript</span>
-                    <span class="badge badge-secondary">JSP</span>
-                    <span class="badge badge-secondary">AnyChart</span>
-                    <span class="badge badge-secondary">GoJS</span>
-                    <span class="badge badge-secondary">MySQL</span>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <a class="card-link" href="https://github.com/853174/InsideSPL" target="_blank">Repo GitHub</a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">GymTime</h5>
-                  <p class="card-text">Controlador de rutinas de gimnasio basado en archivos XML.</p>
-                  <div>
-                    <span class="badge badge-primary">HTML</span>
-                    <span class="badge badge-primary">JavaScript</span>
-                    <span class="badge badge-secondary">XML</span>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <a class="card-link" href="https://github.com/853174/GymTime" target="_blank">Repo GitHub</a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Dantzan</h5>
-                  <p class="card-text">App para la gestión de material, vestuario, préstamos, actuaciones... de un grupo de dantza. Originalmente creada para el grupo Tafallako Dantza Taldea, actualmente en desuso.</p>
-                  <div>
-                    <span class="badge badge-primary">Django</span>
-                    <span class="badge badge-primary">Python</span>
-                    <span class="badge badge-primary">HTML</span>
-                    <span class="badge badge-secondary">Gestión</span>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <a class="card-link" href="https://github.com/853174/Dantzan" target="_blank">Repo GitHub</a>
-                </div>
+            <div class="col-12 col-md-6">
+              <h3><msg-code value="section.experience"></msg-code></h3>
+              <div class="timeline-container">
+                <ul class="timeline">
+                  <li class="timeline__item">
+                    <div class="timeline__step">
+                      <div class="timeline__step__marker"></div>
+                    </div>
+                    <div class="timeline__time">
+                      <msg-code value="section.experience.exp1.startYear"></msg-code>
+                      <span class="timeline__time__end"><msg-code value="section.experience.exp1.time"></msg-code></span>
+                    </div>
+                    <div class="timeline__content">
+                      <div class="timeline__title">
+                        <msg-code value="section.experience.exp1.title"></msg-code>
+                      </div>
+                      <ul class="timeline__points">
+                        <li><msg-code value="section.experience.exp1.subtitle"></msg-code></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="main-block">
-      <div class="text-center mb-3">
-        <a href="#cv"><i class="fas fa-chevron-up fa-lg"></i></a>
+      <div class="main-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3><msg-code value="section.skills"></msg-code></h3>
+              <table id="abilities">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="ability"><msg-code value="section.skills.skill1.title"></msg-code></span><br>
+                      <span class="ability-detail"><msg-code value="section.skills.skill1.subtitle"></msg-code></span>
+                    </td>
+                    <td>
+                      <div class="round fill"></div>
+                      <div class="round fill"></div>
+                      <div class="round fill"></div>
+                      <div class="round"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="ability"><msg-code value="section.skills.skill2.title"></msg-code></span><br>
+                      <span class="ability-detail"><msg-code value="section.skills.skill2.subtitle"></msg-code></span>
+                    </td>
+                    <td>
+                      <div class="round fill"></div>
+                      <div class="round fill"></div>
+                      <div class="round fill"></div>
+                      <div class="round"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="ability"><msg-code value="section.skills.skill3.title"></msg-code></span><br>
+                      <span class="ability-detail"><msg-code value="section.skills.skill3.subtitle"></msg-code></span>
+                    </td>
+                    <td>
+                      <div class="round fill"></div>
+                      <div class="round fill"></div>
+                      <div class="round"></div>
+                      <div class="round"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="ability"><msg-code value="section.skills.skill4.title"></msg-code></span><br>
+                      <span class="ability-detail"><msg-code value="section.skills.skill4.subtitle"></msg-code></span>
+                    </td>
+                    <td>
+                      <div class="round fill"></div>
+                      <div class="round fill"></div>
+                      <div class="round"></div>
+                      <div class="round"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3><msg-code value="section.projects"></msg-code></h3>
+              <div id="projects" class="card-columns">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><msg-code value="section.projects.project1.title"></msg-code></h5>
+                    <h6 class="card-subtitle mb-2"><msg-code value="section.projects.project1.subtitle"></msg-code></h6>
+                    <p class="card-text"><msg-code value="section.projects.project1.description"></msg-code></p>
+                    <div>
+                      <span class="badge badge-primary">Java</span>
+                      <span class="badge badge-primary">SPL</span>
+                      <span class="badge badge-secondary">JGit</span>
+                      <span class="badge badge-secondary">MySQL</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a class="card-link" href="https://github.com/853174/SPLMiner" target="_blank">Repo GitHub</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><msg-code value="section.projects.project2.title"></msg-code></h5>
+                    <h6 class="card-subtitle mb-2"><msg-code value="section.projects.project2.subtitle"></msg-code></h6>
+                    <p class="card-text"><msg-code value="section.projects.project2.description"></msg-code></p>
+                    <div>
+                      <span class="badge badge-primary">Spring</span>
+                      <span class="badge badge-primary">Java</span>
+                      <span class="badge badge-primary">SPL</span>
+                      <span class="badge badge-primary">JavaScript</span>
+                      <span class="badge badge-secondary">JSP</span>
+                      <span class="badge badge-secondary">AnyChart</span>
+                      <span class="badge badge-secondary">GoJS</span>
+                      <span class="badge badge-secondary">MySQL</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a class="card-link" href="https://github.com/853174/InsideSPL" target="_blank">Repo GitHub</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><msg-code value="section.projects.project3.title"></msg-code></h5>
+                    <p class="card-text"><msg-code value="section.projects.project3.description"></msg-code></p>
+                    <div>
+                      <span class="badge badge-primary">HTML</span>
+                      <span class="badge badge-primary">JavaScript</span>
+                      <span class="badge badge-secondary">XML</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a class="card-link" href="https://github.com/853174/GymTime" target="_blank">Repo GitHub</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><msg-code value="section.projects.project4.title"></msg-code></h5>
+                    <p class="card-text"><msg-code value="section.projects.project4.description"></msg-code></p>
+                    <div>
+                      <span class="badge badge-primary">Django</span>
+                      <span class="badge badge-primary">Python</span>
+                      <span class="badge badge-primary">HTML</span>
+                      <span class="badge badge-secondary"><msg-code value="misc.management"></msg-code></span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a class="card-link" href="https://github.com/853174/Dantzan" target="_blank">Repo GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-block">
+        <div class="text-center mb-3">
+          <a href="#cv"><i class="fas fa-chevron-up fa-lg"></i></a>
+        </div>
       </div>
     </div>
   </body>

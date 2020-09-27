@@ -43,7 +43,22 @@ small{
   font-weight: inherit;
 }
 
-/* Classes */
+/* Classes and selectors */
+
+#loading{
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.progress-bar{
+  background-color: var(--emphasis-color);
+}
+
+#filename{
+  color: var(--font-color);
+  font-weight: lighter;
+  font-size: 25px;
+}
 
 .main-block{
   background-color: var(--background-color);
