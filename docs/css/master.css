@@ -32,6 +32,7 @@ a{
 
 a:hover{
   color: var(--secondary-emphasis-color);
+  text-decoration: none;
 }
 
 p{
@@ -67,8 +68,17 @@ small{
   padding-top: 50px;
 }
 
+.main-block .card{
+  background-color: var(--secondary-background-color);
+}
+
 .main-block:nth-child(even){
   background-color: var(--secondary-background-color);
+}
+
+.main-block:nth-child(even) .card{
+  background-color: var(--background-color);
+  border-color: rgba(255,255,255,.1);
 }
 
 th, .emphasis{
@@ -136,7 +146,6 @@ th, .emphasis{
 }
 
 #interests .card{
-  background-color: var(--background-color);
   text-align: center;
   font-weight: bolder;
   padding: 10px;
@@ -169,7 +178,7 @@ th, .emphasis{
   border-radius: 50%;
   border: 1px solid var(--emphasis-color);
   padding: 5px;
-  margin: 5px;
+  margin: 3px;
 
   display: inline-block;
 }
@@ -186,10 +195,6 @@ th, .emphasis{
   #projects{
     column-count: 1;
   }
-}
-
-#projects .card{
-  background-color: var(--background-color);
 }
 
 .badge-primary{
