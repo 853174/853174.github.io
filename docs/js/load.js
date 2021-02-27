@@ -6,7 +6,6 @@ $(document).ready(function(){
 
 function stepOfLoading(step,steps){
   var percentage = (step * 100) / steps;
-  console.log(percentage);
   $('#loading-bar').css('width',percentage + "%");
 }
 
